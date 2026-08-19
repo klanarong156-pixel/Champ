@@ -64,3 +64,13 @@ button, input, select { font: inherit; } button { border: 0; cursor: pointer; } 
 .main-content { position:relative; isolation:isolate; background:linear-gradient(180deg,rgba(235,243,232,.88) 0%,rgba(245,247,241,.93) 38%,rgba(245,247,241,.97) 100%),url('/Champ/farm-dashboard-background.png') center top / cover fixed no-repeat; }
 .main-content::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(245,247,241,.98) 0%,rgba(245,247,241,.88) 38%,rgba(245,247,241,.76) 100%); pointer-events:none; }
 @media (max-width:720px) { .main-content { background-attachment:scroll; background-position:center top; } .main-content::before { background:linear-gradient(180deg,rgba(245,247,241,.95),rgba(245,247,241,.98)); } }
+
+/* Secure browser MQTT setup */
+.mqtt-modal-backdrop { position:fixed; inset:0; z-index:30; display:grid; place-items:center; padding:20px; background:rgba(10,36,24,.52); backdrop-filter:blur(5px); }
+.mqtt-modal { width:min(470px,100%); padding:22px; border:1px solid #dfe8de; border-radius:18px; background:#fff; box-shadow:0 24px 80px rgba(5,35,20,.3); }
+.mqtt-endpoint { overflow-wrap:anywhere; margin:0 0 14px; padding:10px; border-radius:9px; color:#245d32; background:#f1f7ed; font:11px ui-monospace,SFMono-Regular,monospace; }
+.mqtt-input { width:100%; margin-top:7px; padding:11px 12px; border:1px solid #d6e2d3; border-radius:9px; outline:none; color:#17221b; background:#fbfdf9; font-size:13px; }
+.mqtt-input:focus { border-color:#5ca64c; box-shadow:0 0 0 3px #5ca64c22; }
+.mqtt-remember { display:flex; align-items:center; gap:8px; margin:14px 0; color:#53635a; font-size:12px; }
+.mqtt-error { margin:12px 0; padding:10px; border-radius:9px; color:#9b342b; background:#fde7e3; font-size:12px; }
+.mqtt-modal .btn-row { display:flex; justify-content:flex-end; gap:8px; margin-top:15px; }
