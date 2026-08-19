@@ -59,3 +59,8 @@ button, input, select { font: inherit; } button { border: 0; cursor: pointer; } 
 .mode-switch button { flex:1; border:0; border-radius:9px; background:transparent; padding:10px; color:#708077; font-size:12px; font-weight:800; cursor:pointer; }
 .mode-switch button.mode-active { background:#14532d; color:white; box-shadow:0 2px 7px #14532d30; }
 @media (max-width: 720px) { .thai-device-grid { grid-template-columns:1fr; } .topic-table > div { flex-direction:column; gap:4px; } .mapping-table > div { min-width:680px; } }
+
+/* Farm photograph background */
+.main-content { position:relative; isolation:isolate; background:linear-gradient(180deg,rgba(235,243,232,.88) 0%,rgba(245,247,241,.93) 38%,rgba(245,247,241,.97) 100%),url('/Champ/farm-dashboard-background.png') center top / cover fixed no-repeat; }
+.main-content::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(245,247,241,.98) 0%,rgba(245,247,241,.88) 38%,rgba(245,247,241,.76) 100%); pointer-events:none; }
+@media (max-width:720px) { .main-content { background-attachment:scroll; background-position:center top; } .main-content::before { background:linear-gradient(180deg,rgba(245,247,241,.95),rgba(245,247,241,.98)); } }
