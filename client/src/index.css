@@ -98,3 +98,32 @@ button, input, select { font: inherit; } button { border: 0; cursor: pointer; } 
 .main-content .panel,.main-content .metric-card { background:rgba(255,255,255,.78); backdrop-filter:blur(7px); }
 .main-content .page-heading { padding-left:16px; padding-right:16px; border-radius:18px; background:rgba(245,247,241,.42); }
 @media (max-width:720px) { .main-content { background:linear-gradient(180deg,rgba(236,244,233,.50),rgba(245,247,241,.72) 58%,rgba(245,247,241,.88)),url('/Champ/farm-dashboard-background.png') center top / auto 520px fixed no-repeat; } .main-content::before { background:rgba(245,247,241,.16); } .main-content .panel,.main-content .metric-card { background:rgba(255,255,255,.84); } }
+
+/* Final mobile usability pass */
+button, input { touch-action: manipulation; }
+@media (max-width: 720px) {
+  body { overflow-x:hidden; }
+  .sidebar { padding-top:8px; }
+  .sidebar nav { margin-inline:-4px; padding-inline:4px; }
+  .nav-item { min-height:44px; min-width:max-content; font-weight:700; }
+  .nav-item svg { width:16px; height:16px; }
+  .main-content { min-height:calc(100svh - 80px); padding-bottom:34px; background-image:linear-gradient(180deg,rgba(236,244,233,.38),rgba(245,247,241,.66) 58%,rgba(245,247,241,.82)),url('/Champ/farm-dashboard-background.png'); background-size:auto 620px; background-position:center top; }
+  .page-heading { padding-top:18px; padding-bottom:13px; }
+  .page-heading h1 { font-size:24px; letter-spacing:-.02em; }
+  .heading-actions { gap:8px; }
+  .heading-actions .outline-button { min-height:46px; padding-inline:10px; font-size:12px; }
+  .metric-card { min-height:112px; }
+  .small-action, .primary-button, .outline-button { min-height:44px; }
+  .icon-button { min-width:44px; min-height:44px; }
+  .thai-device-grid { grid-template-columns:1fr; }
+  .thai-device-card { padding:14px; }
+  .thai-device-card .small-action { width:100%; justify-content:center; }
+  .topic-table > div { padding-block:10px; }
+  .mqtt-modal { padding-bottom:calc(17px + env(safe-area-inset-bottom)); }
+  .mqtt-modal .btn-row { padding-bottom:env(safe-area-inset-bottom); }
+}
+@media (max-width:520px) {
+  .metric-grid { grid-template-columns:1fr 1fr; }
+  .metric-copy strong { font-size:21px; }
+  .metric-copy p { min-height:24px; }
+}
