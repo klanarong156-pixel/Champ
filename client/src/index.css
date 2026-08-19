@@ -144,3 +144,8 @@ button, input { touch-action: manipulation; }
 .nav-item--mqtt { color:#fff; background:#2f7d32; box-shadow:0 6px 16px #2f7d3230; }
 .nav-item--mqtt:hover { background:#3d8d40; }
 @media (max-width:720px) { .nav-item--mqtt { order:10; padding-inline:14px; border:1px solid #9ed28b; background:#3b8f40; box-shadow:none; }.nav-item--mqtt span { font-weight:800; } }
+
+.mqtt-mobile-quick { display:inline-flex; align-items:center; gap:8px; margin-top:12px; min-height:44px; padding:0 14px; border:1px solid #9ed28b; border-radius:11px; color:#fff; background:#2f7d32; box-shadow:0 6px 16px #2f7d3230; font-size:12px; font-weight:800; cursor:pointer; }
+.mqtt-mobile-quick:hover { background:#3d8d40; }
+@media (min-width:721px) { .mqtt-mobile-quick { display:none; } }
+@media (max-width:720px) { .mqtt-mobile-quick { width:100%; justify-content:center; margin-top:13px; min-height:48px; font-size:13px; } .page-heading > div:first-child { width:100%; } }
