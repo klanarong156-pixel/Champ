@@ -85,6 +85,7 @@ export class BrowserMqttClient {
   publish(topic: string, payload: string) { if (!this.client?.connected) { this.update({ lastError: "MQTT ยังไม่เชื่อมต่อ" }); return false; } this.client.publish(topic, payload, { qos: 0, retain: false }); return true; }
   setRelay(relay: RelayId, state: "ON" | "OFF") { return this.publish(`smartfarm/relay/${relay}/set`, state); }
   setTimer(relay: RelayId, seconds: number) { return this.publish(`smartfarm/relay/${relay}/timer/set`, String(seconds)); }
+  setMode(mode: "MANUAL" | "AUTO") { return this.publish("smartfarm/mode/set", mode); }
   disconnect(emit = true) { if (this.timer) window.clearInterval(this.timer); this.timer = null; this.client?.end(true); this.client = null; if (emit) this.update({ connected: false }); }
   destroy() { this.disconnect(); this.listeners.clear(); }
 }
