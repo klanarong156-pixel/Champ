@@ -174,3 +174,7 @@ button, input { touch-action: manipulation; }
 .sound-toggle { justify-self:start; min-height:32px; padding:0 10px; border:1px solid #c8dfbf; border-radius:10px; color:#6b8270; background:#fff; font-size:10px; font-weight:800; cursor:pointer; }.sound-toggle--on { color:#236e35; border-color:#8fc47f; background:#eaf8e5; }.thai-device-card--completed { animation:countdown-completed .65s ease-in-out 3; border-color:#73bd64; }.thai-device-card--completed .device-symbol { color:#fff; background:#43a94a; box-shadow:0 0 0 7px #43a94a22; }
 @keyframes countdown-completed { 0%,100% { transform:scale(1); } 50% { transform:scale(1.018); box-shadow:0 0 0 7px #65bb5a25, 0 16px 28px #2f873d25; } }
 @media (max-width:720px) { .sound-toggle { width:100%; min-height:40px; text-align:center; } }
+
+/* Unlimited countdown control */
+.unlimited-toggle { justify-self:start; min-height:34px; padding:0 12px; border:1px solid #dfc884; border-radius:10px; color:#8b6516; background:#fffaf0; font-size:10px; font-weight:900; cursor:pointer; }.unlimited-toggle:hover { border-color:#c79a2c; background:#fff4d4; }.unlimited-toggle--on { color:#fff; border-color:#b77d18; background:linear-gradient(135deg,#b97816,#dba735); box-shadow:0 5px 12px #b77d1833; }.countdown-action--running { animation:countdown-pulse 1.8s ease-in-out infinite; }.thai-device-card:has(.countdown-action--running) { border-color:#83bd76; }
+@media (max-width:720px) { .unlimited-toggle { width:100%; min-height:42px; text-align:center; } }
